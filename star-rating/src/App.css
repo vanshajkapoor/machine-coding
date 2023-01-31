@@ -1,0 +1,22 @@
+.star-widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.star-container {
+  display: flex;
+  list-style: none;
+}
+
+.star-container li {
+  margin: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.clear-star {
+  height: 30px;
+  width: 100px;
+}
