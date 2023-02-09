@@ -2,10 +2,12 @@ import React, { useRef, useState } from 'react';
 
 const Stopwatch = () => {
   const [timer, setTimer] = useState({ ms: 0, s: 0, m: 0, h: 0 });
+  const intervalTime = useRef(null);
   const interval = useRef(null);
 
   const startTimer = () => {
-    interval.current = setInterval(run, 1);
+    const time = parseInt(intervalTime.current.value);
+    interval.current = setInterval(run, time);
   };
 
   const pauseTimer = () => {
@@ -42,7 +44,11 @@ const Stopwatch = () => {
   return (
     <>
       <div className="timer">{`${timer.h}:${timer.m}:${timer.s}:${timer.ms}`}</div>
-      <div className="">
+      <div>
+        <p>Interval Time :</p>
+        <input type="text" ref={intervalTime} />
+      </div>
+      <div>
         <button onClick={startTimer}>Start</button>
         <button onClick={pauseTimer}>Pause</button>
         <button onClick={resetTimer}>Reset</button>

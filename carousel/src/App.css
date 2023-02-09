@@ -1,0 +1,34 @@
+button {
+  cursor: pointer;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inner-container button {
+  height: 20px;
+  width: 80px;
+}
+
+.dots button {
+  height: 20px;
+  width: 80px;
+  background: none;
+  border: none;
+}
+
+.carousel-image {
+  /* height: 800px;
+  width: 1200px; */
+}
